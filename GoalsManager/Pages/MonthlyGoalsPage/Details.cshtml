@@ -1,0 +1,25 @@
+﻿@page
+@model GoalsManager.Pages.MonthlyGoalsPage.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MonthlyGoals</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthlyGoals.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MonthlyGoals.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.MonthlyGoals.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

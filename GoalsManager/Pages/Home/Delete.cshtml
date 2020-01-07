@@ -1,0 +1,55 @@
+﻿@page
+@model GoalsManager.Pages.Home.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+    <div class="mt-5">
+        <header class="w-30">
+            <h3><img class="img-responsive mr-4" style="width: 40px" src="~/images/warning.png" />Are you sure you want to complete this goal?</h3>
+        </header>
+        
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Goals.Name)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Goals.Name)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Goals.Description)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Goals.Description)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Goals.Start)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Goals.Start)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Goals.End)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Goals.End)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Goals.Progress)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Goals.Progress)
+                </dd>
+            </dl>
+        </div>
+
+
+        <form method="post">
+            <input type="hidden" asp-for="Goals.Id" />
+            <input type="submit" value="Complete" class="btn btn-info" /> |
+            <a asp-page="./Index">Back to List</a>
+        </form>
+    </div>

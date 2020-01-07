@@ -1,0 +1,53 @@
+﻿@page
+@model GoalsManager.Pages.Home.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container mt-5">
+    <h1>
+        Daily Goals
+    </h1>
+    <p>
+        <a asp-page="Create">Create New</a>
+    </p>
+
+    <div class="row">
+        @foreach (var item in Model.Goals)
+        {
+            <div class="jumbotron col-4 m-3 p-4">
+                <h2>@Html.DisplayFor(modelItem => item.Name)</h2>
+                <img src="~/images/light.png" class="w-100 img-responsive pl-5 pr-5 pb-4" />
+                <p>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </p>
+                <div>
+                    <strong>Start time:</strong>
+                    <p>
+                        @Html.DisplayFor(modelItem => item.Start)
+                    </p>
+                    <strong>End time:</strong>
+                    <p>
+                        @Html.DisplayFor(modelItem => item.End)
+                    </p>
+                </div>
+                <div class="mt-3 mb-3">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <strong>Progress: </strong>@Html.DisplayFor(modelItem => item.Progress)
+                </div>
+                <div>
+                    <a class="btn btn-info" asp-page="./Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-info" asp-page="./Delete" asp-route-id="@item.Id">Complete</a>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+
+
+
