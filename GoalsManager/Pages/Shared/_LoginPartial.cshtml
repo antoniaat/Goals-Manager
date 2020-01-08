@@ -5,15 +5,42 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
-        <ul class="nav navbar-nav navbar-right">
-            @*<li>
-                <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello, @UserManager.GetUserName(User)!</a>
-            </li>*@
-            <li>
-                <button type="submit" class="btn btn-info navbar-btn navbar-link">Logout</button>
-            </li>
-        </ul>
+    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" id="logoutForm" class="w-100">
+        @*<li>
+            <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello, @UserManager.GetUserName(User)!</a>
+        </li>*@
+        <div class="row w-100">
+            <div class="col-11">
+                <ul class="navbar-nav m-auto text-left navbar-left">
+                    <span class="navbar-text mr-4">
+                        <button class="btn btn-info">
+                            <a class="nav-link text-white font-weight-bold" asp-page="/Home/Create">ADD DAILY GOAL <span class="sr-only">(current)</span></a>
+                        </button>
+                    </span>
+                    <li class="nav-item active mr-1 mt-3">
+                        <a class="nav-link" asp-page="/LifeGoalsPage/Index">Life Goals <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active mr-1 mt-3">
+                        <a class="nav-link" asp-page="/YearlyGoalsPage/Index">Yearly Goals <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active mr-1 mt-3">
+                        <a class="nav-link" asp-page="/MonthlyGoalsPage/Index">Monthly Goals <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active mr-1 mt-3">
+                        <a class="nav-link" asp-page="/WeeklyGoalsPage/Index">Weekly Goals <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active mr-1 mt-3">
+                        <a class="nav-link" asp-page="/Home/Index">Daily Goals <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div  class="text-right col-1">
+                <span class="navbar-text mt-2">
+                    <button type="submit" class="btn btn-info navbar-btn navbar-link">Logout</button>
+                </span>
+            </div>
+        </div>
+        
     </form>
 }
 else
