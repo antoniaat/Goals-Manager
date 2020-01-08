@@ -9,7 +9,9 @@ namespace GoalsManager.Data
     {
         public static void Initialize(GoalsManagerContext context)
         {
-            //context.Database.EnsureCreated();
+            context.Database.EnsureDeleted();
+            context.Database.EnsureCreated();
+
             if (context.Goals.Any())
             {
                 return;

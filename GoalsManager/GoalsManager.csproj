@@ -1,8 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200108140320_InitialCreate.cs" />
+    <Compile Remove="Migrations\20200108140320_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20200108144234_InitialCreateAnt.cs" />
+    <Compile Remove="Migrations\20200108144234_InitialCreateAnt.Designer.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />

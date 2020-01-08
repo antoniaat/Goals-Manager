@@ -18,7 +18,7 @@ namespace GoalsManager.Areas.Identity
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<GoalsManagerContext>(options =>
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("GoalsManagerContextConnection")));
+                        context.Configuration.GetConnectionString("DefaultConnection")));
 
                 services.AddDefaultIdentity<GoalsManagerUser>()
                     .AddEntityFrameworkStores<GoalsManagerContext>();
