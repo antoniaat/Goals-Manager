@@ -5,10 +5,9 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<h2>Explore this goal</h2>
 
 <div>
-    <h4>Goals</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -36,12 +35,6 @@
             @Html.DisplayFor(model => model.Goals.End)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Goals.Finished)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Goals.Finished)
-        </dd>
-        <dt>
             @Html.DisplayNameFor(model => model.Goals.Progress)
         </dt>
         <dd>
@@ -51,6 +44,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Goals.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Goals.Id" class="btn btn-info">Edit</a>   
+    <a asp-page="./Index" class="btn btn-info">Back to List</a>
 </div>

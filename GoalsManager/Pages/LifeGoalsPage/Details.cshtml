@@ -5,10 +5,9 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<h2>Explore this goal</h2>
 
 <div>
-    <h4>LifeGoals</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -17,6 +16,31 @@
         <dd>
             @Html.DisplayFor(model => model.LifeGoals.Name)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LifeGoals.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LifeGoals.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LifeGoals.Start)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LifeGoals.Start)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LifeGoals.End)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LifeGoals.End)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LifeGoals.Progress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LifeGoals.Progress)
+        </dd>
+
     </dl>
 </div>
 <div>

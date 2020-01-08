@@ -17,7 +17,7 @@ namespace GoalsManager.Pages.Home
 
         public IActionResult OnGet()
         {
-            DbInitializer.Initialize(_context);
+            //DbInitializer.Initialize(_context);
 
             return Page();
         }

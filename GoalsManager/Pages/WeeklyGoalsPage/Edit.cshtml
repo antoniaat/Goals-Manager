@@ -4,10 +4,8 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<h2>Edit this goal</h2>
 
-<h2>Edit</h2>
-
-<h4>WeeklyGoals</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -20,11 +18,32 @@
                 <span asp-validation-for="WeeklyGoals.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <label asp-for="WeeklyGoals.Description" class="control-label"></label>
+                <input asp-for="WeeklyGoals.Description" class="form-control" />
+                <span asp-validation-for="WeeklyGoals.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeeklyGoals.Start" class="control-label"></label>
+                <input asp-for="WeeklyGoals.Start" class="form-control" />
+                <span asp-validation-for="WeeklyGoals.Start" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeeklyGoals.End" class="control-label"></label>
+                <input asp-for="WeeklyGoals.End" class="form-control" />
+                <span asp-validation-for="WeeklyGoals.End" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeeklyGoals.Progress" class="control-label"></label>
+                <input asp-for="WeeklyGoals.Progress" class="form-control" />
+                <span asp-validation-for="WeeklyGoals.Progress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-info" />
             </div>
         </form>
     </div>
 </div>
+
 
 <div>
     <a asp-page="./Index">Back to List</a>

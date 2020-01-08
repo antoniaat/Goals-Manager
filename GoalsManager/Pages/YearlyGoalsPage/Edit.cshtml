@@ -5,9 +5,8 @@
     ViewData["Title"] = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Edit this goal</h2>
 
-<h4>YearlyGoals</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -20,12 +19,31 @@
                 <span asp-validation-for="YearlyGoals.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <label asp-for="YearlyGoals.Description" class="control-label"></label>
+                <input asp-for="YearlyGoals.Description" class="form-control" />
+                <span asp-validation-for="YearlyGoals.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearlyGoals.Start" class="control-label"></label>
+                <input asp-for="YearlyGoals.Start" class="form-control" />
+                <span asp-validation-for="YearlyGoals.Start" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearlyGoals.End" class="control-label"></label>
+                <input asp-for="YearlyGoals.End" class="form-control" />
+                <span asp-validation-for="YearlyGoals.End" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearlyGoals.Progress" class="control-label"></label>
+                <input asp-for="YearlyGoals.Progress" class="form-control" />
+                <span asp-validation-for="YearlyGoals.Progress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-info" />
             </div>
         </form>
     </div>
 </div>
-
 <div>
     <a asp-page="./Index">Back to List</a>
 </div>

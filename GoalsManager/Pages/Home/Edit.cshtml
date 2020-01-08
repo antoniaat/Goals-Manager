@@ -5,9 +5,8 @@
     ViewData["Title"] = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Edit this goal</h2>
 
-<h4>Goals</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -35,19 +34,12 @@
                 <span asp-validation-for="Goals.End" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        @*<input asp-for="Goals.Finished" /> @Html.DisplayNameFor(model => model.Finished)*@
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
                 <label asp-for="Goals.Progress" class="control-label"></label>
                 <input asp-for="Goals.Progress" class="form-control" />
                 <span asp-validation-for="Goals.Progress" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-info" />
             </div>
         </form>
     </div>
