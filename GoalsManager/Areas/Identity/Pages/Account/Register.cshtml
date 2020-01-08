@@ -1,13 +1,13 @@
 ﻿@page
 @model RegisterModel
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Register to create and list all of your goals";
 }
 
 <h2>@ViewData["Title"]</h2>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 mt-5">
         <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <hr />
             <div asp-validation-summary="All" class="text-danger"></div>
@@ -33,6 +33,11 @@
             </div>
             <button type="submit" class="btn btn-info">Register</button>
         </form>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <img src="~/images/login.jpg" class="img-responsive" style="width: 100%" />
+        </section>
     </div>
 </div>
 
