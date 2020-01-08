@@ -1,23 +1,40 @@
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 20px;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Indie Flower', cursive;
+h1, h2, h3 {
+    font-family: 'Indie Flower';
 }
 
-.progress {
-        background-color: white !important;
+#cookieConsent > div > div.navbar-header > button {
+    display: none;
 }
 
-.img-wrapper {
-    width: 30% !important;
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
+    /* Hide captions */
     .carousel-caption {
         display: none;
     }

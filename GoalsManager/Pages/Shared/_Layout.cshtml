@@ -12,7 +12,7 @@
     <environment include="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site..css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     </environment>
     <environment include="Development">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" />
@@ -41,6 +41,10 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" asp-page="/Home/Index">Daily Goals <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <partial name="_LoginPartial" />
                 </li>
             </ul>
             <span class="navbar-text">
@@ -158,7 +162,7 @@
             <!-- Copyright -->
             <div class="footer-copyright text-center py-3">
                 © 2020 Copyright:
-                 JUST AN AWESOME UNWE PROJECT. Developed by Antonia Atanasova, Gabriela Georgieva and Ivan Nikolov.
+                JUST AN AWESOME UNWE PROJECT. Developed by Antonia Atanasova, Gabriela Georgieva and Ivan Nikolov.
             </div>
             <!-- Copyright -->
 

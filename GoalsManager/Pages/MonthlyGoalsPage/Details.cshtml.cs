@@ -6,14 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using GoalsManager.Models;
+using GoalsManager.Data;
 
 namespace GoalsManager.Pages.MonthlyGoalsPage
 {
     public class DetailsModel : PageModel
     {
-        private readonly GoalsManager.Models.GoalsManagerContext _context;
+        private readonly GoalsManagerContext _context;
 
-        public DetailsModel(GoalsManager.Models.GoalsManagerContext context)
+        public DetailsModel(GoalsManagerContext context)
         {
             _context = context;
         }

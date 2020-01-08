@@ -26,7 +26,7 @@ namespace GoalsManager
                 {
                     var context = services.GetRequiredService<GoalsManagerContext>();
                     //context.Database.EnsureCreated();
-                    DbInitializer.Initialize(context);
+                    //DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {

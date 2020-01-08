@@ -7,14 +7,15 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GoalsManager.Models;
+using GoalsManager.Data;
 
 namespace GoalsManager.Pages.LifeGoalsPage
 {
     public class EditModel : PageModel
     {
-        private readonly GoalsManager.Models.GoalsManagerContext _context;
+        private readonly GoalsManagerContext _context;
 
-        public EditModel(GoalsManager.Models.GoalsManagerContext context)
+        public EditModel(GoalsManagerContext context)
         {
             _context = context;
         }

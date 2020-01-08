@@ -6,14 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using GoalsManager.Models;
+using GoalsManager.Data;
 
 namespace GoalsManager.Pages.YearlyGoalsPage
 {
     public class DeleteModel : PageModel
     {
-        private readonly GoalsManager.Models.GoalsManagerContext _context;
+        private readonly GoalsManagerContext _context;
 
-        public DeleteModel(GoalsManager.Models.GoalsManagerContext context)
+        public DeleteModel(GoalsManagerContext context)
         {
             _context = context;
         }

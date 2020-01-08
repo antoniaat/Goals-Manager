@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace GoalsManager.Data
 {
@@ -10,7 +9,7 @@ namespace GoalsManager.Data
     {
         public static void Initialize(GoalsManagerContext context)
         {
-            context.Database.EnsureCreated();
+            //context.Database.EnsureCreated();
             if (context.Goals.Any())
             {
                 return;
